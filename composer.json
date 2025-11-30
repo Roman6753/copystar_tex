@@ -8,11 +8,13 @@
     "require": {
         "php": "^8.2",
         "alirezasedghi/laravel-image-faker": "^1.0",
+        "avadim/fast-excel-writer": "^6.8",
         "intervention/image": "^3.11",
         "intervention/image-laravel": "^1.5",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "livewire/livewire": "^3.7"
+        "livewire/livewire": "^3.7",
+        "maatwebsite/excel": "^3.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.16",
