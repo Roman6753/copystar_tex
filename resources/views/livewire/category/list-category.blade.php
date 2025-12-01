@@ -1,11 +1,6 @@
 <div>
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-2 mx-auto">
-            <button wire:click="export">Export</button>
-            <form wire:click="import">
-                <input type="file" wire:model="file">
-                <button type="submit">Импортировать</button>
-            </form>
             <div class="flex flex-col text-center w-full">
                 <h2 class="sm:text-2xl text-xl font-medium title-font mb-4 text-gray-900">List Category</h2>
                 <div class="flex justify-between">

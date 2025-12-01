@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ $title ?? 'Page Title' }}</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    @vite('resources/css/app.css')
+    {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
 </head>
 
 <body class="grid grid-cols-[1fr_4fr] h-screen">
@@ -21,7 +21,7 @@
     </aside>
     <div class="container flex flex-col">
         <header class="bg-amber-200">
-            <a href="{{ route('home') }}">Home</a>
+            <a href="{{ route('home') }}" wire:navigate>Home</a>
         </header>
         <main class="flex-grow">
             {{ $slot }}

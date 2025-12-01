@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ $title ?? 'Page Title' }}</title>
-
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        @vite('resources/css/app.css')
+        {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
     </head>
     <body class="flex flex-col h-screen">
         @session('ok')
@@ -28,7 +28,7 @@
                 <span class="ml-3 text-xl">CopyStar</span>
                 </a>
                 <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                    <a href="{{ route('dashboard') }}" class="mr-5 hover:text-gray-900">Dashboard</a>
+                    <a href="{{ route('dashboard') }}" wire:navigate class="mr-5 hover:text-gray-900">Dashboard</a>
                     <a class="mr-5 hover:text-gray-900">Second Link</a>
                     <a class="mr-5 hover:text-gray-900">Third Link</a>
                     <a class="mr-5 hover:text-gray-900">Fourth Link</a>

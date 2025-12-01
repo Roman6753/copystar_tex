@@ -5,7 +5,7 @@ namespace App\Imports;
 use App\Models\Category;
 use Maatwebsite\Excel\Concerns\ToModel;
 
-class CategoriesImportExpotr implements ToModel
+class CategoryImport implements ToModel
 {
     /**
     * @param array $row
@@ -15,8 +15,8 @@ class CategoriesImportExpotr implements ToModel
     public function model(array $row)
     {
         return new Category([
-           'id'     => $row[0],
-           'name'    => $row[1],
+            'id' => $row[0],
+            'name' => $row[1],
         ]);
     }
 }

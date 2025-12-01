@@ -5,7 +5,7 @@ namespace App\Exports;
 use App\Models\Category;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class CategoriesExpotr implements FromCollection
+class CategoryExport implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
