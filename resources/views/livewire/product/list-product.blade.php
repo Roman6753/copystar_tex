@@ -11,7 +11,7 @@
                            class="border border-gray-300 p-2 rounded">
                 </div>
 
-                {{-- <div class="flex justify-between mb-4">
+                <div class="flex justify-between mb-4">
                     <div class="flex space-x-2">
                         <select wire:model.live="category_id" class="border border-gray-300 p-2 rounded">
                             <option value="">All Categories</option>
@@ -31,7 +31,7 @@
                     <button wire:click="resetFilters" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
                         Reset Filters
                     </button>
-                </div> --}}
+                </div>
 
                 @if ($products->isEmpty())
                     <div class="py-4 text-center text-gray-500">
