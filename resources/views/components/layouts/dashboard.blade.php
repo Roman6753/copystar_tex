@@ -17,6 +17,7 @@
             <li><a href="{{ route('dashboard.category') }}">Category</a></li>
             <li><a href="{{ route('dashboard.country') }}">Country</a></li>
             <li><a href="{{ route('dashboard.user') }}">Users</a></li>
+            <li><a href="{{ route('dashboard.product') }}">Product</a></li>
         </ul>
     </aside>
     <div class="container flex flex-col">

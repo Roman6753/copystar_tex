@@ -2,8 +2,4 @@
     home
 
 
-
-
-
-
 </x-layouts.app>

@@ -23,7 +23,7 @@ class ProductFactory extends Factory
             'count' => fake()->numberBetween(1,10),
             'price' => fake()->numberBetween(1000,10000),
             'country_id' => fake()->numberBetween(1,193),
-            'image' => '/storage/products/1.png',
+            // 'image' => '/storage/products/1.png',
         ];
     }
 }
