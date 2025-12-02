@@ -22,10 +22,20 @@ class ListProduct extends Component
     public $fields = ['ID', 'Name', 'Price', 'Count', 'Category', 'Country', 'Actions'];
 
     protected $queryString = [
-        'search' => ['except' => ''],
-        'category_id' => ['except' => ''],
-        'country_id' => ['except' => ''],
+        'search' => ['except' => '', 'as' => 'q'],
+        'category_id' => ['except' => '', 'as' => 'cat'],
+        'country_id' => ['except' => '', 'as' => 'cnt'],
+        'sortField' => ['except' => 'id', 'as' => 'sort'],
+        'sortDirection' => ['except' => 'desc', 'as' => 'dir'],
+        'page' => ['except' => 1],
     ];
+
+    public function mount()
+    {
+        $this->fill(request()->only([
+            'search', 'category_id', 'country_id', 'sortField', 'sortDirection', 'page'
+        ]));
+    }
 
     public function sortBy($field)
     {
@@ -36,11 +46,28 @@ class ListProduct extends Component
         }
 
         $this->sortField = $field;
+        $this->resetPage();
     }
 
     public function resetFilters()
     {
         $this->reset(['search', 'category_id', 'country_id']);
+        $this->resetPage();
+    }
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingCategoryId()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingCountryId()
+    {
+        $this->resetPage();
     }
 
     public function deleteProduct($id)
